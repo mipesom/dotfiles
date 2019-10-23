@@ -1,5 +1,0 @@
-#!/bin/bash
-
-OUTPUT="That's the output: "
-
-echo $OUTPUT
