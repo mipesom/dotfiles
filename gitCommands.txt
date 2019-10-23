@@ -1,0 +1,3 @@
+" git add .vimrc
+" git commit -m 'Changed vim colorscheme!'
+" git push -u origin master

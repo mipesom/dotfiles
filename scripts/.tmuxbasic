@@ -1,0 +1,17 @@
+#!/bin/bash
+
+SESSION='basename $PWD'
+
+tmux new-session -d -s 'basics'
+
+tmux rename-window system
+tmux split-window -h
+tmux select-pane -t 0
+tmux resize-pane -R 10
+tmux split-window -v
+
+tmux new-window -n 'general'
+tmux split-window -h
+
+tmux select-window -t system
+tmux a -t basics

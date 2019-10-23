@@ -1,0 +1,5 @@
+#!/bin/bash
+
+sync 
+echo dropped cache 
+sudo tee /proc/sys/vm/drop_caches
