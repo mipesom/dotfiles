@@ -22,6 +22,7 @@ export PATH="${PATH}:${HOME}/.dotfiles/scripts/"
 export PATH="${PATH}:${HOME}/.local/bin/"
 export PATH="${PATH}:${HOME}/usr/local/"
 export PATH="${PATH}:${HOME}/Applications/"
+export PATH="${PATH}:${HOME}/Applications/Godot_v3.1.1-stable_mono_x11_64/"
 # echo $PATH 
 
 export TERM=xterm-256color
