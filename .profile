@@ -7,3 +7,5 @@ xset -b
 xmodmap -e "clear lock" #disable caps lock switch
 xmodmap -e "keysym Caps_Lock = Escape" #set caps_lock as escape 
 xmodmap -e "pointer = 1 0 3 4 5 6 7 0 2 0"
+
+export PATH="$HOME/.cargo/bin:$PATH"
