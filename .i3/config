@@ -20,7 +20,7 @@ hide_edge_borders none
 
 # change borders
 bindsym $mod+u border none
-bindsym $mod+y border pixel 
+bindsym $mod+y border pixel
 bindsym $mod+n border normal
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -204,6 +204,8 @@ for_window [class="FerengiCpp"] move to workspace $ws2
 for_window [class="Coach 2020"] move to workspace $ws2
 for_window [class="Sirens"] move to workspace $ws2
 for_window [class="Ferengi2020"] move to workspace $ws2
+for_window [class="Super Kristie"] move to workspace $ws0
+# for_window [class="SuperKristie"] move to workspace $ws2
 # assign [class="Firefox"] $ws0
 for_window [class="discord"] move to workspace $ws0
 assign [class="keepassxc"] $ws1
@@ -221,7 +223,9 @@ assign [class="Steam"] $ws7
 
 # Open specific applications in floating mode
 #for_window [class="jetbrains-rider"] floating enable
-for_window [class="City Sirens"] floating enable 
+for_window [class="City Sirens"] floating enable
+for_window [class="SuperKristie"] floating enable
+for_window [class="love"] floating enable
 for_window [class="keepassxc"] floating enable
 for_window [title="alsamixer"] floating enable border pixel 1
 for_window [class="calamares"] floating enable border normal
@@ -310,9 +314,12 @@ mode "resize" {
 # Lock screen
 bindsym $mod+Shift+Ctrl+l exec --no-startup-id betterlockscreen -l dim
 
-bindsym $mod+Shift+F12 exec amixer -D pulse sset Master 5%+; exec notify-send "Volume Up"
-bindsym $mod+Shift+F11 exec amixer -D pulse sset Master 5%-; exec notify-send "Volume Down"
-bindsym $mod+Shift+F10 exec amixer -D pulse sset Master toggle; exec notify-send "Mute Toggled"
+bindsym $mod+Shift+F12 exec ~/.dotfiles/volume.sh up
+# amixer -D pulse sset Master 5%+; exec notify-send "Volume Up"
+bindsym $mod+Shift+F11 exec ~/.dotfiles/volume.sh down
+# amixer -D pulse sset Master 5%-; exec notify-send "Volume Down"
+bindsym $mod+Shift+F10 exec ~/.dotfiles/volume.sh mute
+# amixer -D pulse sset Master toggle; exec notify-send "Mute Toggled"
 
 # Autostart applications
 exec --no-startup-id /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1
@@ -350,7 +357,7 @@ exec_always --no-startup-id pkill compton; compton -b
 # Change the variable name at the place you want to match the color
 # of your terminal like this:
 # [example]
-# If you want your bar to have the same background color as your 
+# If you want your bar to have the same background color as your
 # terminal background change the line 362 from:
 # background #14191D
 # to:
@@ -412,9 +419,9 @@ bindsym $mod+m bar mode toggle
 # class                   border  backgr. text    indic.   child_border
   client.focused          #556064 #2F3D44 #1a8bbc #FDF6E3
   client.focused_inactive #2F3D44 #2F3D44 #1ABC9C #454948
-  client.unfocused        #2F3D44 #455054 #1a8bbc #454948
+  client.unfocused        #2E3C43 #455054 #1a8bbc #454948
   client.urgent           #CB4B16 #FDF6E3 #1ABC9C #268BD2
-  client.placeholder      #000000 #0c0c0c #ffffff #000000 
+  client.placeholder      #000000 #0c0c0c #ffffff #000000
 
   client.background       #2B2C2B
 
@@ -434,7 +441,7 @@ gaps outer 5
 # Smart gaps (gaps used if only more than one container on the workspace)
 smart_gaps on
 
-# Smart borders (draw borders around container only if it is not the only container on this workspace) 
+# Smart borders (draw borders around container only if it is not the only container on this workspace)
 # on|no_gaps (on=always activate and no_gaps=only activate if the gap size to the edge of the screen is 0)
 smart_borders on
 
