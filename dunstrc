@@ -300,3 +300,7 @@
 #     foreground = "#F67245"
 #
 # vim: ft=cfg
+
+[play_sound]
+    summary = "*"
+    script = /home/mipesom/.dotfiles/notification.sh

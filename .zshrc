@@ -13,9 +13,9 @@ source $ZSH/oh-my-zsh.sh
 
 #==================================================================================================
 
-#GOPATH=/home/mipesom/Development/go
-#export GOPATH
-#PATH=$PATH:$GOPATH/bin # Add GOPATH/bin to PATH for scripting
+GOPATH=/home/mipesom/Development/Go
+export GOPATH
+PATH=$PATH:$GOPATH/bin 					# Add GOPATH/bin to PATH for scripting
 
 # export PATH=$HOME/.bin:bin:/usr/local/go/bin:$HOME:$HOME/Applications/Haxe4:$PATH <-- OLD
 export PATH="${PATH}:${HOME}/.dotfiles/scripts/"
@@ -61,3 +61,5 @@ neofetch
 
 
 
+
+source /home/mipesom/.config/broot/launcher/bash/br
