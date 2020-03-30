@@ -162,9 +162,9 @@ set $ws1 1:1 - control
 set $ws2 2:2 - web/mail
 set $ws3 3:3 - chat
 set $ws4 4:4 - files
-set $ws5 5:5 - work
-set $ws6 6:6 - entertainment
-set $ws7 7:7 - streaming
+set $ws5 5:5 - browser
+set $ws6 6:6 - work
+set $ws7 7:7 - entertainment
 set $ws8 8:8 - terminal
 set $ws9 9:9 - info
 
@@ -229,7 +229,8 @@ assign [class="jetbrains-clion"] $ws5
 assign [class="streamlink-twitch-gui"] $ws7
 # for_window [class="mpv"] move to workspace $ws7
 # assign [class="mpv"] $ws7
-assign [class="Steam"] $ws8
+assign [class="Steam"] $ws6
+for_window [class="love"] move to $ws9
 
 
 
