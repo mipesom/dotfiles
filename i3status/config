@@ -21,6 +21,8 @@ order += "cpu_temperature 0"
 order += "load"
 order += "disk /"
 order += "disk /home"
+order += "disk /mnt/Media"
+order += "disk /mnt/Timeshift"
 # order += "wireless _first_"
 # order += "ethernet _first_"
 # order += "battery all"
@@ -44,7 +46,15 @@ disk "/" {
 disk "/home" {
         # format = " hdd %avail "
         format = " ⛁ %avail "
-}     
+}  
+disk "/mnt/Media" {
+        # format = " hdd %avail "
+        format = " ⛁ %avail "
+} 
+disk "/mnt/Timeshift" {
+        # format = " hdd %avail "
+        format = " ⛁ %avail "
+}  
  
 
 ethernet _first_ {
